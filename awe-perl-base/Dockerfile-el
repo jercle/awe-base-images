@@ -1,0 +1,15 @@
+FROM jercle/awe-httpd-base:oel8-1.0.0
+
+LABEL type="base"
+
+USER root
+
+# RUN apk --no-cache add \
+# perl-cgi \
+# perl-file-slurp \
+# perl-xml-libxml \
+# perl-path-class
+
+USER www-data
+
+EXPOSE 8080
