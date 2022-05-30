@@ -99,3 +99,9 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results-perl-oracle.sarif'
+
+      - name: Upload results to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: trivy-results-perl-oracle
+          path: trivy-results-perl-oracle.sarif
