@@ -30,7 +30,7 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
+          docker build -f ./linux/awe-httpd-base/Dockerfile -t docker.io/jercler/awe-httpd-base:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@2a2157eb22c08c9a1fac99263430307b8d1bc7a2
