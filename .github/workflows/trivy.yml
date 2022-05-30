@@ -33,7 +33,7 @@ jobs:
           docker build -f ./linux/awe-httpd-base/Dockerfile -t docker.io/jercle/awe-httpd-base:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@2a2157eb22c08c9a1fac99263430307b8d1bc7a2
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: 'docker.io/jercle/awe-httpd-base:${{ github.sha }}'
           format: 'template'
@@ -60,7 +60,7 @@ jobs:
           docker build -f ./linux/awe-perl-base/Dockerfile -t docker.io/jercle/awe-perl-base:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@2a2157eb22c08c9a1fac99263430307b8d1bc7a2
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: 'docker.io/jercle/awe-perl-base:${{ github.sha }}'
           format: 'template'
@@ -87,7 +87,7 @@ jobs:
           docker build -f ./linux/awe-perl-oracle/Dockerfile -t docker.io/jercle/awe-perl-oracle:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@2a2157eb22c08c9a1fac99263430307b8d1bc7a2
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: 'docker.io/jercle/awe-perl-oracle:${{ github.sha }}'
           format: 'template'
