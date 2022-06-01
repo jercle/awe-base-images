@@ -12,13 +12,10 @@ RUN mkdir /opt/oracle && \
   cd /opt/oracle && \
   wget https://download.oracle.com/otn_software/linux/instantclient/216000/instantclient-basic-linux.x64-21.6.0.0.0dbru.zip && \
   wget https://download.oracle.com/otn_software/linux/instantclient/216000/instantclient-sdk-linux.x64-21.6.0.0.0dbru.zip && \
-  wget https://download.oracle.com/otn_software/linux/instantclient/216000/instantclient-sqlplus-linux.x64-21.6.0.0.0dbru.zip && \
   unzip -o instantclient-basic-linux.x64-21.6.0.0.0dbru.zip && \
   unzip -o instantclient-sdk-linux.x64-21.6.0.0.0dbru.zip && \
-  unzip -o instantclient-sqlplus-linux.x64-21.6.0.0.0dbru.zip && \
   rm instantclient-basic-linux.x64-21.6.0.0.0dbru.zip \
-  instantclient-sdk-linux.x64-21.6.0.0.0dbru.zip \
-  instantclient-sqlplus-linux.x64-21.6.0.0.0dbru.zip && \
+  instantclient-sdk-linux.x64-21.6.0.0.0dbru.zip && \
   mkdir /etc/ld.so.conf.d && \
   ldconfig /etc/ld.so.conf.d/ && \
   echo /opt/oracle/instantclient_21_6 > /etc/ld.so.conf.d/oracle-instantclient.conf && \

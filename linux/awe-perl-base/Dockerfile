@@ -14,6 +14,7 @@ RUN apk --no-cache upgrade && \
   perl-utils \
   perl-dbi \
   perl-template-toolkit \
+  perl-html-template \
   perl-cgi \
   perl-dev \
   perl-xml-generator \
@@ -21,7 +22,8 @@ RUN apk --no-cache upgrade && \
   libnsl \
   make \
   build-base \
-  libc6-compat
+  libc6-compat && \
+  cpan install Tie::IxHash
 
 USER www-data
 
