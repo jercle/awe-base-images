@@ -1,4 +1,4 @@
-FROM jercle/awe-perl-base:alpine
+FROM --platform=linux/amd64 jercle/awe-perl-base:alpine-latest
 
 LABEL project="awe-dmz-migration"
 LABEL type="base"
