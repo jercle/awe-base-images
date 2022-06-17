@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to these images will be documented in this file.
 
+## [1.0.5] - 2022-06-17
+### awe-httpd-base
+- Update `awe-httpd-base` base image to `2.4.54-alpine`
+
+This is to resolve the following CVE
+| Severity                                                                                                                 | Priority Score / 1000  | Issue                                                                     | Exploit Maturity      |
+| :------:                                                                                                                 | :--------------------  | :----                                                                     | :---------------      |
+| ![high severity](https://res.cloudinary.com/snyk/image/upload/w_20,h_20/v1561977819/icon/h.png "high severity")   | **471**  | Out-of-bounds Read <br/>[SNYK-ALPINE316-APR-2849152](https://snyk.io/vuln/SNYK-ALPINE316-APR-2849152)   | No Known Exploit   |
+
 ## [1.0.4] - 2022-06-01
 ### awe-perl-base
 - Added install of perl-html-template and Tie::IxHash
