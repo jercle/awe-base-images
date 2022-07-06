@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to these images will be documented in this file.
 
+## [1.0.6] - 2022-07-06
+### awe-tomcat-jdk7-corretto
+- Changed base Tomcat image to 8.5-jdk8-corretto
+
 ## [1.0.5] - 2022-06-17
 ### awe-httpd-base
 - Update `awe-httpd-base` base image to `2.4.54-alpine`

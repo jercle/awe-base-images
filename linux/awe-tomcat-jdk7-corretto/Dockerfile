@@ -1,4 +1,4 @@
-FROM tomcat:8.5.78-jdk8-corretto
+FROM --platform=linux/amd64 tomcat:8.5-jdk8-corretto
 
 RUN yum remove -y java-1.8.0-amazon-corretto-devel && \
     yum update -y && \
@@ -18,4 +18,7 @@ RUN groupadd -r ${RUN_GROUP} && useradd -g ${RUN_GROUP} -d ${CATALINA_HOME} -s /
 
 USER tomcat
 
-EXPOSE 80
+EXPOSE 8080
+
+# docker build -f ./linux/awe-tomcat-jdk7-corretto/Dockerfile -t jercle/awe-tomcat-jdk7-corretto:latest -t jercle/awe-tomcat-jdk7-corretto:1.0.5 --no-cache .
+# docker build -f ./linux/awe-tomcat-jdk7-corretto/Dockerfile -t jercle/awe-tomcat-jdk7-corretto:latest --no-cache .
