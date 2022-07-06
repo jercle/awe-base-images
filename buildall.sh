@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=0.0.6
+version=1.0.6
 repository=jercle
 
 declare -a imageNames
@@ -22,7 +22,7 @@ dockerPrune() {
 
 buildImages() {
   for imageName in "${imageNames[@]}"; do
-    echo "Building $repository/$imageName\nTags: latest $version"
+    echo -e "Building $repository/$imageName\nTags: latest $version"
     docker build -f ./linux/$imageName/Dockerfile -t $repository/$imageName:latest -t $repository/$imageName:$version --no-cache .
   done
   echo "Done!"
@@ -39,12 +39,21 @@ pushImages() {
   echo "Done!"
 }
 
+gitRelease() {
+
+  # echo "git tag -a $version -m Release $version"
+  git tag -a $version -m "Release $version"
+  git push origin $version
+}
+
 if [ "$1" == "build" ]; then
   buildImages
 elif [ "$1" == "push" ]; then
   pushImages
 elif [ "$1" == "prune" ]; then
   dockerPrune
+elif [ "$1" == "gitrel" ]; then
+  gitRelease
 else
   printHelp
 fi
