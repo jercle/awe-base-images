@@ -23,7 +23,8 @@ RUN apk --no-cache upgrade && \
   make \
   build-base \
   libc6-compat && \
-  cpan install Tie::IxHash
+  cpan install Tie::IxHash && \
+  cpan install HTML::Template::Expr
 
 USER www-data
 

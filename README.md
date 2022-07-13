@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to these images will be documented in this file.
 
+## [1.0.7] - 2022-07-13
+### awe-perl-base
+- Add `cpan install HTML::Template::Expr`
+
 ## [1.0.6] - 2022-07-06
 ### awe-tomcat-jdk7-corretto
 - Changed base Tomcat image to 8.5-jdk8-corretto
