@@ -23,7 +23,7 @@ jobs:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
     name: httpd-base scan
-    runs-on: "ubuntu-18.04"
+    runs-on: "ubuntu-latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -50,7 +50,7 @@ jobs:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
     name: perl-base scan
-    runs-on: "ubuntu-18.04"
+    runs-on: "ubuntu-latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -77,7 +77,7 @@ jobs:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
     name: perl-oracle scan
-    runs-on: "ubuntu-18.04"
+    runs-on: "ubuntu-latest"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
