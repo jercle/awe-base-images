@@ -3,15 +3,7 @@ All notable changes to these images will be documented in this file.
 
 ## [1.0.8] - 2022-10-20
 ### awe-perl-base
-Performing the following updates to resolve CVEs:
-* CVE-2022-3209
-* CVE-2022-35252
-* CVE-2022-30065
-* CVE-2022-30065
-* CVE-2021-46828
-* CVE-2021-46828
-* CVE-2022-37434
-
+Performing the following updates:
 * (1/11) Upgrading expat (2.4.8-r0 -> 2.4.9-r0)
 * (2/11) Upgrading busybox (1.35.0-r14 -> 1.35.0-r17)
 * (3/11) Upgrading ca-certificates (20211220-r0 -> 20220614-r0)
@@ -23,6 +15,16 @@ Performing the following updates to resolve CVEs:
 * (9/11) Upgrading alpine-baselayout-data (3.2.0-r22 -> 3.2.0-r23)
 * (10/11) Upgrading alpine-baselayout (3.2.0-r22 -> 3.2.0-r23)
 * (11/11) Upgrading ca-certificates-bundle (20211220-r0 -> 20220614-r0)
+
+...to resolve CVEs:
+
+* CVE-2022-3209
+* CVE-2022-35252
+* CVE-2022-30065
+* CVE-2022-30065
+* CVE-2021-46828
+* CVE-2021-46828
+* CVE-2022-37434
 
 ## [1.0.7] - 2022-07-13
 ### awe-perl-base
