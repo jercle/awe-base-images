@@ -18,14 +18,14 @@ Performing the following updates:
 
 ...to resolve CVEs:
 
-#### Vulnerability CVE-2022-37434
+#### CVE-2022-37434
 
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
 |CRITICAL | zlib | 1.2.12-r2 | [CVE-2022-37434](https://avd.aquasec.com/nvd/cve-2022-37434)
 
 zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).
-#### Vulnerability CVE-2021-46828
+#### CVE-2021-46828
 
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
@@ -33,7 +33,7 @@ zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in infl
 
 In libtirpc before 1.3.3rc1, remote attackers could exhaust the file descriptors of a process that uses libtirpc because idle TCP connections are mishandled. This can, in turn, lead to an svc_run infinite loop without accepting new connections.
 
-#### Vulnerability CVE-2022-30065
+#### CVE-2022-30065
 
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
@@ -41,7 +41,7 @@ In libtirpc before 1.3.3rc1, remote attackers could exhaust the file descriptors
 
 A use-after-free in Busybox 1.35-x's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the copyvar function.
 
-#### Vulnerability CVE-2022-35252
+#### CVE-2022-35252
 
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
@@ -49,7 +49,7 @@ A use-after-free in Busybox 1.35-x's awk applet leads to denial of service and p
 | LOW | libcurl | 7.83.1-r3 | [CVE-2022-35252](https://avd.aquasec.com/nvd/cve-2022-35252) |
 No description is available for this CVE.
 
-#### Vulnerability CVE-2022-3209
+#### CVE-2022-3209
 
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
