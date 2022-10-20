@@ -38,12 +38,14 @@ In libtirpc before 1.3.3rc1, remote attackers could exhaust the file descriptors
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
 | HIGH | ssl_client | 1.35.0-r15 | [CVE-2022-30065](https://avd.aquasec.com/nvd/cve-2022-30065) |
+
 A use-after-free in Busybox 1.35-x's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the copyvar function.
 
 #### Vulnerability CVE-2022-35252
 
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
+
 | LOW | libcurl | 7.83.1-r3 | [CVE-2022-35252](https://avd.aquasec.com/nvd/cve-2022-35252) |
 No description is available for this CVE.
 
@@ -52,9 +54,6 @@ No description is available for this CVE.
 | Severity | Package | Fixed Version | Link |
 | ------------- | ------------- | ------------- | ------------- |
 | UNKNOWN | libxml2 | 2.9.14-r1	| N/A |
-
-
-
 
 
 ## [1.0.7] - 2022-07-13
