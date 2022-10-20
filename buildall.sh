@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=1.0.7
+version=1.0.8
 repository=jercle
 
 declare -a imageNames
@@ -11,7 +11,7 @@ for dir in ./linux/*/; do
 done
 
 printHelp() {
-  echo "Usage: ./buildall.sh build|push|clean|help"
+  echo "Usage: ./buildall.sh build|push|prune|gitrel|help"
 }
 
 dockerPrune() {
