@@ -13,25 +13,33 @@ Updates to libcurl and expat on httpd based alpine images (all but awe-tomcat-jd
 #### CVE-2022-32221
 
 | Severity | Package | Fixed Version | Link |
+| ------------- | ------------- | ------------- | ------------- |
 | MEDIUM | libcurl | 7.83.1-r4 | [CVE-2022-32221](https://avd.aquasec.com/nvd/cve-2022-32221) |
+
 A vulnerability was found in curl. The issue occurs when doing HTTP(S) transfers, where curl might erroneously use the read callback (CURLOPT_READFUNCTION) to ask for data to send, even when the CURLOPT_POSTFIELDS option has been set if it previously used the same handle to issue a PUT request which used that callback. This flaw may surprise the application and cause it to misbehave and either send off the wrong data or use memory after free or similar in the subsequent POST request.
 
 #### CVE-2022-42916
 
 | Severity | Package | Fixed Version | Link |
+| ------------- | ------------- | ------------- | ------------- |
 | HIGH | libcurl | 7.83.1-r4 | [CVE-2022-42916](https://avd.aquasec.com/nvd/2022/cve-2022-42916/) |
+
 In curl before 7.86.0, the HSTS check could be bypassed to trick it into staying with HTTP. Using its HSTS support, curl can be instructed to use HTTPS directly (instead of using an insecure cleartext HTTP step) even when HTTP is provided in the URL. This mechanism could be bypassed if the host name in the given URL uses IDN characters that get replaced with ASCII counterparts as part of the IDN conversion, e.g., using the character UTF-8 U+3002 (IDEOGRAPHIC FULL STOP) instead of the common ASCII full stop of U+002E (.). The earliest affected version is 7.77.0 2021-05-26.
 
 #### CVE-2022-42915
 
 | Severity | Package | Fixed Version | Link |
+| ------------- | ------------- | ------------- | ------------- |
 | CRITICAL | libcurl | 7.83.1-r4 | [CVE-2022-42915](https://avd.aquasec.com/nvd/2022/cve-2022-42915/) |
+
 curl before 7.86.0 has a double free. If curl is told to use an HTTP proxy for a transfer with a non-HTTP(S) URL, it sets up the connection to the remote server by issuing a CONNECT request to the proxy, and then tunnels the rest of the protocol through. An HTTP proxy might refuse this request (HTTP proxies often only allow outgoing connections to specific port numbers, like 443 for HTTPS) and instead return a non-200 status code to the client. Due to flaws in the error/cleanup handling, this could trigger a double free in curl if one of the following schemes were used in the URL for the transfer: dict, gopher, gophers, ldap, ldaps, rtmp, rtmps, or telnet. The earliest affected version is 7.77.0.
 
 #### CVE-2022-43680
 
 | Severity | Package | Fixed Version | Link |
+| ------------- | ------------- | ------------- | ------------- |
 | HIGH | expat | 2.5.0-r0 | [CVE-2022-43680](https://avd.aquasec.com/nvd/2022/cve-2022-43680/) |
+
 In libexpat through 2.4.9, there is a use-after free caused by overeager destruction of a shared DTD in XML_ExternalEntityParserCreate in out-of-memory situations.
 
 
