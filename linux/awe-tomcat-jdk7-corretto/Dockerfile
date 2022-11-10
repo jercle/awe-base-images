@@ -7,8 +7,7 @@ RUN yum remove -y java-1.8.0-amazon-corretto-devel && \
     rm -rf /usr/lib/jvm/java-1.8.0-amazon-corretto && \
     rm -rf /var/cache/yum
 
-RUN mkdir -p /usr/local/tomcat/conf/Catalina/localhost
-RUN chmod -R a+rwx /usr/local/tomcat/conf/Catalina
+
 
 ENV JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk
 

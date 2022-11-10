@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=1.0.9
+version=1.0.10
 repository=jercle
 
 declare -a imageNames

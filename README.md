@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to these images will be documented in this file.
 
+## [1.0.10] - 2022-11-11
+* Remove the following from Corretto Dockerfile:
+RUN mkdir -p /usr/local/tomcat/conf/Catalina/localhost
+RUN chmod -R a+rwx /usr/local/tomcat/conf/Catalina
+
 ## [1.0.9] - 2022-11-11
 * Added 2 tomcat conf folders
 
