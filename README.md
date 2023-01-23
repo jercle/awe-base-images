@@ -1,6 +1,35 @@
 # Changelog
 All notable changes to these images will be documented in this file.
 
+## [1.0.11] - 2023-01-23
+* Updates to libcurl and krb5-libs on alpine based images to resolve following CVEs:
+
+#### Vulnerability CVE-2022-42898
+
+| Severity |	Package |	Fixed Version |	Link |
+| ------------- | ------------- | ------------- | ------------- |
+| HIGH |	krb5-libs |	1.19.4-r0 |	[CVE-2022-42898](https://avd.aquasec.com/nvd/cve-2022-42898 |)
+
+PAC parsing in MIT Kerberos 5 (aka krb5) before 1.19.4 and 1.20.x before 1.20.1 has integer overflows that may lead to remote code execution (in KDC, kadmind, or a GSS or Kerberos application server) on 32-bit platforms (which have a resultant heap-based buffer overflow), and cause a denial of service on other platforms. This occurs in krb5_pac_parse in lib/krb5/krb/pac.c. Heimdal before 7.7.1 has "a similar bug."
+
+#### Vulnerability CVE-2022-43551
+
+| Severity |	Package |	Fixed Version |	Link |
+| ------------- | ------------- | ------------- | ------------- |
+| HIGH |	libcurl |	7.83.1-r5 |	[CVE-2022-43551](https://avd.aquasec.com/nvd/cve-2022-43551) |
+
+A vulnerability exists in curl <7.87.0 HSTS check that could be bypassed to trick it to keep using HTTP. Using its HSTS support, curl can be instructed to use HTTPS instead of using an insecure clear-text HTTP step even when HTTP is provided in the URL. However, the HSTS mechanism could be bypassed if the host name in the given URL first uses IDN characters that get replaced to ASCII counterparts as part of the IDN conversion. Like using the character UTF-8 U+3002 (IDEOGRAPHIC FULL STOP) instead of the common ASCII full stop (U+002E) .. Then in a subsequent request, it does not detect the HSTS state and makes a clear text transfer. Because it would store the info IDN encoded but look for it IDN decoded.
+
+
+#### Vulnerability CVE-2022-43552
+
+| Severity |	Package |	Fixed Version |	Link |
+| ------------- | ------------- | ------------- | ------------- |
+| MEDIUM |	libcurl |	7.83.1-r5	| [CVE-2022-43552](https://avd.aquasec.com/nvd/cve-2022-43552) |
+
+A vulnerability was found in curl. In this issue, curl can be asked to tunnel all protocols virtually it supports through an HTTP proxy. HTTP proxies can deny these tunnel operations using an appropriate HTTP error response code. When getting denied to tunnel the specific SMB or TELNET protocols, curl can use a heap-allocated struct after it has been freed and shut down the code path in its transfer.
+
+
 ## [1.0.10] - 2022-11-11
 * Remove the following from Corretto Dockerfile:
   * RUN mkdir -p /usr/local/tomcat/conf/Catalina/localhost
