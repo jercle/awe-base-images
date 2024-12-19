@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 httpd:2.4.54-alpine
+FROM httpd:2.4.54-alpine
 
 LABEL project="awe-dmz-migration"
 LABEL type="base"
@@ -16,7 +16,7 @@ RUN apk upgrade --no-cache && \
   /usr/local/apache2/logs && \
   rm /usr/local/apache2/htdocs/index.html
 
-COPY ./linux/awe-httpd-base/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
 
 USER www-data
 

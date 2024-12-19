@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=1.0.12
+version=1.0.14
 repository=jercle
 
 declare -a imageNames
@@ -23,7 +23,7 @@ dockerPrune() {
 buildImages() {
   for imageName in "${imageNames[@]}"; do
     echo -e "Building $repository/$imageName\nTags: latest $version"
-    docker build -f ./linux/$imageName/Dockerfile -t $repository/$imageName:latest -t $repository/$imageName:$version --no-cache .
+    docker buildx build --provenance=true --sbom=true -f ./linux/$imageName/Dockerfile -t $repository/$imageName:latest -t $repository/$imageName:$version --push .
   done
   echo "Done!"
 }
@@ -57,3 +57,6 @@ elif [ "$1" == "gitrel" ]; then
 else
   printHelp
 fi
+
+
+# docker buildx build --provenance=true --sbom=true -t $repository/$imageName:latest -t $repository/$imageName:$version --push .
